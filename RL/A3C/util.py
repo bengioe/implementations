@@ -6,6 +6,10 @@ import gzip
 import pickle# as pickle
 from collections import OrderedDict
 
+def gradient_descent(params, grads, lr):
+    up = [(i, i - lr * gi) for i,gi in zip(params, grads)]
+    return up
+
 def rmsprop(decay, epsilon=1e-3, clip=None):
     def sgd(params, grads, lr):
         if clip is not None:

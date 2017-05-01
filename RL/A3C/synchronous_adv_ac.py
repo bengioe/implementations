@@ -11,7 +11,7 @@ import theano
 import theano.tensor as T
 import theano.gradient
 
-from util import StackModel, ConvLayer, HiddenLayer, rmsprop
+from util import StackModel, ConvLayer, HiddenLayer, rmsprop, shared
 
 
 def make_model(nactions):
